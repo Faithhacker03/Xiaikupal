@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Naging Kayo Ba?</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="glass-card">
+    <img src="{{ url_for('static', filename='creepy-doll.jpg') }}" alt="Image" class="profile-image">
+    <h1>Naging kayo ba?</h1>
+    <form method="post">
+      <button name="answer" value="oo" class="yes">Oo</button>
+      <button name="answer" value="hindi" class="no">Hindi</button>
+    </form>
+
+    {% if show_video %}
+    <div class="video-container">
+      <video controls autoplay>
+        <source src="{{ url_for('static', filename='umaasa.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    {% endif %}
+
+    <footer>Credit: <a href="https://t.me/Xairuu1" target="_blank">@Xairuu1</a></footer>
+  </div>
+</body>
+</html>
